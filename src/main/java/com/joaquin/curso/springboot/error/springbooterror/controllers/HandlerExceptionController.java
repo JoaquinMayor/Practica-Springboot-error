@@ -27,7 +27,7 @@ public class HandlerExceptionController {
         error.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
 
         //return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR.value()).body(error);
-        return ResponseEntity.internalServerError().body(error); //es internal servererror, porque es el erroe 500 que nos mandaba la division por 0 y en body va el texto que queresmos mandar
+        return ResponseEntity.internalServerError().body(error); //Es internal servererror, porque es el error 500 que nos mandaba la división por 0 y en body va el texto que queremos mandar
     }
 
     @ExceptionHandler(NumberFormatException.class)
@@ -44,7 +44,7 @@ public class HandlerExceptionController {
     }
 
     @ExceptionHandler({NullPointerException.class, HttpMessageNotWritableException.class, UserNotFoundException.class})
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR) //Como se hace con un mapa de esta manera se pasa el error
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR) 
     public Map<String,Object> userNotFoundEception(Exception ex){
         
         Map<String, Object> error = new HashMap<>();
