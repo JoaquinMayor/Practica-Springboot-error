@@ -8,6 +8,6 @@
 
 
 
-<p align="centerr">
+<p align="center">
  <img src="https://rubensa.files.wordpress.com/2020/07/spring-error.png" alt="Programación orientada a aspectos">
 </p>
