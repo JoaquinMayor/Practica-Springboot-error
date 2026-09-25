@@ -18,11 +18,11 @@ import com.joaquin.curso.springboot.error.springbooterror.models.Error;
 @RestControllerAdvice //Esto se usa para el manejo de errores o exception, se encuentra mapeado a estas cosas
 public class HandlerExceptionController {
     
-    @ExceptionHandler(ArithmeticException.class) //Se mapea a este error, si se mapea a mas de una se ponen entre {}
+    @ExceptionHandler(ArithmeticException.class) //Se mapea a este error, si se mapea a más de una se ponen entre {}
     public ResponseEntity<Error> divisionByZero(Exception ex){ //Response entity sirve para manejar errores, el signo de pregunta sirve para poder poner cualquier elemento
         Error error = new Error();
         error.setDate(new Date());
-        error.setError("Error division por cero!");
+        error.setError("Error división por cero!");
         error.setMessage(ex.getMessage());
         error.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
 
@@ -36,7 +36,7 @@ public class HandlerExceptionController {
         
         Map<String, Object> error = new HashMap<>();
         error.put("Date", new Date());
-        error.put("error","Numero incorrecto o invalido, no tiene formato de digito");
+        error.put("error","Número incorrecto o inválido, no tiene formato de dígito");
         error.put("message", ex.getMessage());
         error.put("status", HttpStatus.INTERNAL_SERVER_ERROR.value());
 
@@ -49,7 +49,7 @@ public class HandlerExceptionController {
         
         Map<String, Object> error = new HashMap<>();
         error.put("Date", new Date());
-        error.put("error","Usuario o roll no existente");
+        error.put("error","Usuario o rol no existente");
         error.put("message", ex.getMessage());
         error.put("status", HttpStatus.INTERNAL_SERVER_ERROR.value());
 

@@ -14,7 +14,7 @@ public class UserRepository {
 
     public UserRepository(){
         this.users = new ArrayList<>();
-        users.add(new User("Joaquin", "Mayor", 1L));
+        users.add(new User("Joaquín", "Mayor", 1L));
         users.add(new User("Dario", "Mayor", 2L));
         users.add(new User("Rosa", "Otero", 3L));
         users.add(new User("Ignacio", "Tosini", 4L));
